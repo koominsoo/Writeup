@@ -1,5 +1,0 @@
-./intro_to_rev binary reversing
-
-in server
-
-
