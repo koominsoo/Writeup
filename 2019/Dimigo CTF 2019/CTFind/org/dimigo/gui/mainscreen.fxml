@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.dimigo.gui.Controller">
+   <children>
+      <Label fx:id="lbl_TITLE" layoutX="336.0" layoutY="23.0" text="CTFind">
+         <font>
+            <Font name="Tommi" size="130.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_LISTALL" layoutX="120.0" layoutY="362.0" mnemonicParsing="false" onAction="#handleListAction" prefHeight="341.0" prefWidth="356.0" text="Upcoming Events">
+         <font>
+            <Font name="Tropical Asian DEMO Regular" size="33.0" />
+         </font></Button>
+      <Label fx:id="lbl_hello1" layoutX="376.0" layoutY="238.0" text="Know your CTF">
+         <font>
+            <Font name="Tommi" size="44.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_PASTALL" layoutX="513.0" layoutY="362.0" mnemonicParsing="false" onAction="#handlePastAction" prefHeight="341.0" prefWidth="356.0" text="Past Events">
+         <font>
+            <Font name="Tropical Asian DEMO Regular" size="33.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

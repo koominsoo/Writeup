@@ -1,0 +1,3 @@
+hint1: pyinstaller compiled binary ( python 3.5 )
+hint2: pyi-archive_viewer, extract pyc, fix header
+hint3: pyc

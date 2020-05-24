@@ -1,0 +1,4 @@
+[Clarification]
+sha512(flag_filename) == 4e5f9ba024a9371b047220b7f20dbf34db03fb7925a911246966bacc764f4ca31270bb9ca63ad1a7287bef39cd828be08cc0fbd1998ea920b2bb12e3f24a967d
+
+len(flag_filename) == 8
