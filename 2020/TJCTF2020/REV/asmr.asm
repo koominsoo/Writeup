@@ -1,3 +1,5 @@
+BITS 64
+
 	global	_start
 	section	.text
 
@@ -58,23 +60,23 @@ main:
 	lea	rsi, [rbp-0x50]
 	mov	rdx, 0x40
 	syscall
-	cmp	rax, 0x11
+	cmp	rax, 0x11			;rax==0x11
 	jne	label5
-	lea	rax, [rbp-0x50]
-	cmp	BYTE [rax+16], 0x0a
+	lea	rax, [rbp-0x50]			
+	cmp	BYTE [rax+16], 0x0a		;[rax+16]==0xa
 	jne	label5
-	mov	BYTE [rax+16], 0x00
+	mov	BYTE [rax+16], 0x00		;[rax+16]=0
 	jmp	label2
 label1:
-	xor	BYTE [rax], 0x69
+	xor	BYTE [rax], 0x69		;[rax]^0x69
 	inc	rax
 label2:
-	cmp	BYTE [rax], 0x00
+	cmp	BYTE [rax], 0x00		;[rax+16] 까지 1로점프
 	jne	label1
-	mov	rax, 0x360c1f0605360c1e
+	mov	rax, 0x360c1f0605360c1e		;rax 배열을 R 이라하면, R[:8] 까지 비교
 	cmp	QWORD [rbp-0x50], rax
 	jne	label5
-	mov	rax, 0x0c0c10361b041a08
+	mov	rax, 0x0c0c10361b041a08		;R[8:16] 비교
 	cmp	QWORD [rbp-0x48], rax
 	jne	label5
 	mov	rdi, dat
@@ -84,7 +86,7 @@ label2:
 	mov	rdx, 0x00
 	jmp	label4
 label3:
-	mov	dl, BYTE [rdi]
+	mov	dl, BYTE [rdi]			;Dat 배열을 D 라하면, D[i]=D[i]^R[i%0x10]
 	xor	dl, BYTE [rax+rbx]
 	mov	BYTE [rdi], dl
 	inc	rdi
@@ -94,10 +96,10 @@ label3:
 	jne	label4
 	mov	rbx, 0x00
 label4:
-	cmp	rcx, len
+	cmp	rcx, len			; i < len(dat)
 	jne	label3
 	mov	rax, 0x01
-	mov	rdi, QWORD [rbp-0x08]
+	mov	rdi, QWORD [rbp-0x08]		
 	mov	rsi, dat
 	mov	rdx, len
 	syscall
