@@ -31,6 +31,6 @@ for i in range(100):
     s=s.split()
     print(s)
     r.sendline(str(calc(s[2],s[3],s[4])))
-    print r.recvline(timeout=1)+str(i)
+    print(r.recvline(timeout=1)+str(i))
 
 r.interactive()
