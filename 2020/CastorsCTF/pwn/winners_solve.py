@@ -1,7 +1,7 @@
 from pwn import *
 
-r=remote("chals20.cybercastors.com",14434)
-#r=process("./winners")
+#r=remote("chals20.cybercastors.com",14434)
+r=process("./winners")
 b=ELF("./winners")
 
 pay=""
