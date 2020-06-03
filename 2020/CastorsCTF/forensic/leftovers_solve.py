@@ -36,7 +36,7 @@ mappings = {
     "25":"8",
     "26":"9",
     "27":"0",
-    "28":"\\n",
+    "28":"\n",
     "29":"esc",
     "2a":"back",
     "2b":"tab",
@@ -83,13 +83,12 @@ mappings = {
 alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 f = open("data.txt","r")
 data = f.readlines()
-input_data = ""
+re = ""
 for l in data:
     point = l[4]+l[5]
     if point in mappings:
-        input_data += mappings[point]
-    if l[0]+l[1]=='20' and input_data[len(input_data)-1] in alphabet:
-        input_data=input_data[:len(input_data)-1]+chr(ord(input_data[len(input_data)-1])-32)
+        re += mappings[point]
+    if l[0]+l[1]=='20' and re[len(re)-1] in alphabet:
+        re=re[:len(re)-1]+chr(ord(re[len(re)-1])-32)
 
-print input_data
-
+print(re)

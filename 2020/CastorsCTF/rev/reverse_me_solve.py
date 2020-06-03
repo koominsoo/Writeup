@@ -11,7 +11,7 @@ flag=flag.split()
 
 for i in range(len(flag)):
     if chr(int(flag[i],16)) in k:
-        flag[i]=chr(ord(k[int(flag[i],16)-0x61-10])-2)
+        flag[i]=chr(ord(k[int(flag[i],16)-0x61-key])-2)
     else:
         flag[i]=chr(int(flag[i],16)-2)
 
