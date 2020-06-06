@@ -1,0 +1,47 @@
+   0x80487a0:	push   ebp
+   0x80487a1:	push   ebx
+   0x80487a2:	push   edi
+   0x80487a3:	push   esi
+   0x80487a4:	sub    esp,0xc
+   0x80487a7:	xor    esi,esi
+   0x80487a9:	mov    edi,DWORD PTR [esp+0x20]
+   0x80487ad:	mov    ebx,0x80808081
+   0x80487b2:	data16 data16 data16 data16 nop WORD PTR cs:[eax+eax*1+0x0]
+   0x80487c0:	mov    eax,DWORD PTR [esi*4+0x80492ac] ;ac
+   0x80487c7:	mov    ecx,eax
+   0x80487c9:	shl    ecx,0x4
+   0x80487cc:	shr    eax,0x4
+   0x80487cf:	or     eax,ecx
+   0x80487d1:	movzx  ebp,al
+   0x80487d4:	call   0x8048570 <rand@plt>
+   0x80487d9:	mov    ecx,eax
+   0x80487db:	imul   ebx
+   0x80487dd:	add    edx,ecx
+   0x80487df:	mov    eax,edx
+   0x80487e1:	shr    eax,0x1f
+   0x80487e4:	sar    edx,0x7
+   0x80487e7:	add    edx,eax
+   0x80487e9:	imul   eax,edx,0xff
+   0x80487ef:	sub    ecx,eax
+   0x80487f1:	lea    eax,[ecx*4+0x0]
+   0x80487f8:	shr    ecx,0x2
+   0x80487fb:	or     ecx,eax
+   0x80487fd:	movzx  eax,cl
+   0x8048800:	movsx  ecx,BYTE PTR [edi+esi*1]
+   0x8048804:	xor    ecx,DWORD PTR [ebp*4+0x80492ac]
+   0x804880b:	xor    ecx,DWORD PTR [eax*4+0x80492ac]
+   0x8048812:	cmp    ecx,DWORD PTR [esi*4+0x8049144]
+   0x8048819:	jne    0x8048825
+   0x804881b:	inc    esi
+   0x804881c:	mov    al,0x1
+   0x804881e:	cmp    esi,0x48
+   0x8048821:	jle    0x80487c0
+   0x8048823:	jmp    0x8048827
+   0x8048825:	xor    eax,eax
+   0x8048827:	movzx  eax,al
+   0x804882a:	add    esp,0xc
+   0x804882d:	pop    esi
+   0x804882e:	pop    edi
+   0x804882f:	pop    ebx
+   0x8048830:	pop    ebp
+   0x8048831:	ret
