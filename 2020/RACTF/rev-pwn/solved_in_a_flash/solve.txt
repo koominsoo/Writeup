@@ -1,0 +1,2 @@
+in window command, 
+>strings flash.bin
