@@ -1,0 +1,21 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sun Jun 14 00:21:18 2020
+Invocation: foremost luke.jpg 
+Output directory: /home/snwo/Documents/GitHub/CTF/2020/NahamConCTF/stegano/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: luke.jpg
+Start: Sun Jun 14 00:21:18 2020
+Length: 22 KB (23368 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+Finish: Sun Jun 14 00:21:18 2020
+
+0 FILES EXTRACTED
+	
+------------------------------------------------------------------
+
+Foremost finished at Sun Jun 14 00:21:18 2020

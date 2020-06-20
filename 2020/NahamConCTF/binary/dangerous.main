@@ -1,0 +1,58 @@
+   0x4011da:	push   rbp
+   0x4011db:	mov    rbp,rsp
+   0x4011de:	sub    rsp,0x620
+=> 0x4011e5:	mov    DWORD PTR [rbp-0x614],edi
+   0x4011eb:	mov    QWORD PTR [rbp-0x620],rsi
+   0x4011f2:	mov    rax,QWORD PTR [rip+0x2e67]        # 0x404060 <stdout>
+   0x4011f9:	mov    ecx,0x0
+   0x4011fe:	mov    edx,0x2
+   0x401203:	mov    esi,0x0
+   0x401208:	mov    rdi,rax
+   0x40120b:	call   0x4010d0 <setvbuf@plt>
+   0x401210:	movabs rax,0x6e61642073277449
+   0x40121a:	movabs rdx,0x742073756f726567
+   0x401224:	mov    QWORD PTR [rbp-0x210],rax
+   0x40122b:	mov    QWORD PTR [rbp-0x208],rdx
+   0x401232:	movabs rax,0x6f6c61206f67206f
+   0x40123c:	movabs rdx,0x656b61542021656e
+   0x401246:	mov    QWORD PTR [rbp-0x200],rax
+   0x40124d:	mov    QWORD PTR [rbp-0x1f8],rdx
+   0x401254:	movabs rax,0x202c7369687420
+   0x40125e:	mov    edx,0x0
+   0x401263:	mov    QWORD PTR [rbp-0x1f0],rax
+   0x40126a:	mov    QWORD PTR [rbp-0x1e8],rdx
+   0x401271:	lea    rdx,[rbp-0x1e0]
+   0x401278:	mov    eax,0x
+   0x40127d:	mov    ecx,0x3a
+   0x401282:	mov    rdi,rdx
+   0x401285:	rep stos QWORD PTR es:[rdi],rax
+   0x401288:	mov    QWORD PTR [rbp-0x8],0x0
+   0x401290:	lea    rdi,[rip+0xf61]        # 0x4021f8
+   0x401297:	call   0x401090 <puts@plt>
+   0x40129c:	lea    rax,[rbp-0x210]
+   0x4012a3:	mov    rdi,rax
+   0x4012a6:	call   0x4010a0 <strlen@plt>
+   0x4012ab:	lea    rdx,[rbp-0x210]
+   0x4012b2:	add    rax,rdx
+   0x4012b5:	mov    edx,0x200
+   0x4012ba:	mov    rsi,rax
+   0x4012bd:	mov    edi,0x0
+   0x4012c2:	call   0x4010c0 <read@plt>
+   0x4012c7:	mov    QWORD PTR [rbp-0x8],rax
+   0x4012cb:	cmp    QWORD PTR [rbp-0x8],0x0
+   0x4012d0:	jg     0x4012e5
+   0x4012d2:	lea    rdi,[rip+0xf37]        # 0x402210
+   0x4012d9:	call   0x401090 <puts@plt>
+   0x4012de:	mov    eax,0x1
+   0x4012e3:	jmp    0x40130c
+   0x4012e5:	mov    BYTE PTR [rbp-0x11],0x0
+   0x4012e9:	lea    rax,[rbp-0x210]
+   0x4012f0:	mov    rdi,rax
+   0x4012f3:	call   0x401090 <puts@plt>
+   0x4012f8:	mov    rax,QWORD PTR [rip+0x2d59]        # 0x404058
+   0x4012ff:	mov    rdi,rax
+   0x401302:	call   0x401090 <puts@plt>
+   0x401307:	mov    eax,0x0
+   0x40130c:	leave  
+   0x40130d:	ret    
+
