@@ -1,0 +1,1 @@
+x=msgbox("/ and 2 and + and - are constant" ,0, "Warning")
