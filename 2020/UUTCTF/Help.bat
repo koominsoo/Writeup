@@ -1,1 +1,0 @@
-Attrib +h +s +r
