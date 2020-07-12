@@ -11,5 +11,5 @@ for i in range(0,len(t),8):
     for i in range(0,len(a),2):
         temp=a[i:i+2]+temp
     flag+=temp
-
-print('rgbCTF{'+binascii.unhexlify(flag)+'}')
+flag=binascii.unhexlify(flag)
+print('rgbCTF{{{}}}'.format(flag))
