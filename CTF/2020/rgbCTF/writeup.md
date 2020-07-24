@@ -1,7 +1,3 @@
-
-
-
-
 # rgbCTF writeup
 
 ## REV
@@ -26,7 +22,7 @@ Then, I can solve this problem by making a Rainbow table with all the letters
 >Sometimes two letters are encrypted.
 >Therefore, the Rainbow table should also have a value that encodes all two letters.
 
-Here is my Sousce code : [rainbows_solver.py](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/crypto/rainbows_solver.py)
+Here is my S0usce c0de.[rainbows_solver.py](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/crypto/rainbows_solver.py)
 ***
 ## BEGINNER
 ### Pieces
@@ -61,9 +57,8 @@ Let's see divide() function.
 
 It gets the input string one-by-one. If It is divided by two, It adds **|** to **ans**. Or, It adds **\\** to **ans**
 
-Okay, let's decrypted that string.
-If the added character is **|**,  multiplies the letter by 2 . Or, the added character is **\\**, plus 1 and multiplies by 2
->First letter, 9 is not the number 9. the 9 is 39 by ascii-code
+Okay, let's decrypted that string. If the added character is **|** ,  multiplies the letter by 2 . Or, if the added character is **\\**, plus 1 and multiplies by 2
+>comparing string is char code, not number
 
 Source code : [pieces_solve.py](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/beginner/pieces_solve.py)
 ***
