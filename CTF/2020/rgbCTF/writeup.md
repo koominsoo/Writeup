@@ -69,9 +69,9 @@ If not, It adds **\\** to **ans**
 
 Okay, let's decrypted that string.
 
-If added character is **|**,  multiplies the letter by 2 
+If the added character is **|**,  multiplies the letter by 2 
 
-If added character is **\\**, adds 1 and multiplies by 2
+If the added character is **\\**, plus 1 and multiplies by 2
 
 >First letter, 9 is not the number 9. the 9 is 39 by ascii-code
 
