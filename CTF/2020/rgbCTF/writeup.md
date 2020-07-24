@@ -10,6 +10,7 @@
 ## CRYPTO
 ### Rainbows
 [rainbows.txt](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/crypto/rainbows.txt)
+
 There are 32 and 64 bites strings.
 32byte string is encrypted with **MD5**
 64byte string is encrypted with **SHA256**
@@ -26,7 +27,8 @@ Then, I can solve this problem by making a Rainbow table with all the letters
 >Therefore, the Rainbow table should also have a value that encodes all two letters.
 
 Here is my S0usce c0de.
-[rainbows_solver.py]([https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/crypto/rainbows_solver.py](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/crypto/rainbows_solver.py))
+
+[rainbows_solver.py](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/crypto/rainbows_solver.py)
 ***
 ## BEGINNER
 ### Pieces
@@ -61,7 +63,9 @@ compares with **"9|2/9/:|4/7|8|4/2/1/2/9/"**
 Let's see divide() function.
 
 It takes input string one by one and divide by **2**
+
 If It is divided by two, It adds **|** to **ans**.
+
 If not, It adds **\\** to **ans**
 
 Okay, let's decrypted that string.
@@ -72,7 +76,7 @@ If added character is **\\**, adds 1 and multiplies by 2
 
 >First letter, 9 is not the number 9. the 9 is 39 by ascii-code
 
-Source code : [pieces_solve.py]([https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/beginner/pieces_solve.py](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/beginner/pieces_solve.py))
+Source code : [pieces_solve.py](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/beginner/pieces_solve.py)
 
 
 ## MISC
