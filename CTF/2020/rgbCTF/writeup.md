@@ -1,6 +1,7 @@
 
 
 
+
 # rgbCTF writeup
 
 ## REV
@@ -12,9 +13,7 @@
 ### Rainbows
 [rainbows.txt](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/crypto/rainbows.txt)
 
-There are 32 and 64 bites strings.
-32byte : encrypted with **MD5**.
-64byte : encrypted with **SHA256**
+There are 32 and 64 bites strings. 32byte : encrypted with **MD5**. 64byte : encrypted with **SHA256**
 
 I guess the name 'rainbows' is related with **rainbow table**
 >What is rainbow table?
@@ -56,23 +55,14 @@ return ans;
 }
 }
 ```
-It receives input which is encrypted with divide() function and 
-compares with **"9|2/9/:|4/7|8|4/2/1/2/9/"**
+It receives input which is encrypted with divide() function and compares with **"9|2/9/:|4/7|8|4/2/1/2/9/"**
 
 Let's see divide() function.
 
-It takes input string one by one and divide by **2**
-
-If It is divided by two, It adds **|** to **ans**.
-
-If not, It adds **\\** to **ans**
+It gets the input string one-by-one. If It is divided by two, It adds **|** to **ans**. Or, It adds **\\** to **ans**
 
 Okay, let's decrypted that string.
-
-If the added character is **|**,  multiplies the letter by 2 
-
-If the added character is **\\**, plus 1 and multiplies by 2
-
+If the added character is **|**,  multiplies the letter by 2 . Or, the added character is **\\**, plus 1 and multiplies by 2
 >First letter, 9 is not the number 9. the 9 is 39 by ascii-code
 
 Source code : [pieces_solve.py](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/beginner/pieces_solve.py)
