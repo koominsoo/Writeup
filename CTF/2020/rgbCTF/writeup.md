@@ -1,5 +1,6 @@
 
 
+
 # rgbCTF writeup
 
 ## REV
@@ -11,8 +12,8 @@
 ### Rainbows
 [rainbows.txt](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/crypto/rainbows.txt)
 
-There are 32 and 64 bites strings.
-32byte string is encrypted with **MD5**
+There are 32 and 64 bites strings.<br>
+32byte string is encrypted with **MD5**<br>
 64byte string is encrypted with **SHA256**
 
 I guess the name 'rainbows' is related with **rainbow table**
@@ -26,9 +27,7 @@ Then, I can solve this problem by making a Rainbow table with all the letters
 >Sometimes two letters are encrypted.
 >Therefore, the Rainbow table should also have a value that encodes all two letters.
 
-Here is my S0usce c0de.
-
-[rainbows_solver.py](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/crypto/rainbows_solver.py)
+Here is my S0usce c0de.[rainbows_solver.py](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/crypto/rainbows_solver.py)
 ***
 ## BEGINNER
 ### Pieces
