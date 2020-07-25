@@ -123,4 +123,4 @@ Than, make two strings which have strange letters and original letters. like **Ã
 
 I made the two strings and wrote minus each string one-by-one
 
-[Diff_solve.py]([https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/misc/Diff_solve.py](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/misc/Diff_solve.py))
+[Diff_solve.py](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/misc/Diff_solve.py)
