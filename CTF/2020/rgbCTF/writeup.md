@@ -25,7 +25,7 @@ Then, I can solve this problem by making a Rainbow table with all the letters
 >Sometimes two letters are encrypted.
 >Therefore, the Rainbow table should also have a value that encodes all two letters.
 
-Here is my Sousce code. [**rainbows_solver.py**](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/crypto/rainbows_solver.py)
+Here is my Source code. [**rainbows_solver.py**](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/crypto/rainbows_solver.py)
 ***
 ## BEGINNER
 ### Pieces
