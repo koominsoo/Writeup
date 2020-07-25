@@ -12,7 +12,7 @@
 ### Rainbows
 [**rainbows.txt**](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/crypto/rainbows.txt)
 
-There are 32 and 64 bites strings. 32byte : encrypted with **MD5**. 64byte : encrypted with **SHA256**
+There are 32 and 64 bytes strings. 32byte : encrypted with **MD5**. 64byte : encrypted with **SHA256**
 
 I guess the name 'rainbows' is related with **rainbow table**
 >What is the rainbow table?
