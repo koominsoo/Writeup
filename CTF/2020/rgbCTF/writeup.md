@@ -10,7 +10,7 @@
 ***
 ## CRYPTO
 ### Rainbows
-[rainbows.txt](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/crypto/rainbows.txt)
+[**rainbows.txt**](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/crypto/rainbows.txt)
 
 There are 32 and 64 bites strings. 32byte : encrypted with **MD5**. 64byte : encrypted with **SHA256**
 
@@ -25,11 +25,11 @@ Then, I can solve this problem by making a Rainbow table with all the letters
 >Sometimes two letters are encrypted.
 >Therefore, the Rainbow table should also have a value that encodes all two letters.
 
-Here is my S0usce c0de.[rainbows_solver.py](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/crypto/rainbows_solver.py)
+Here is my S0usce c0de. [**rainbows_solver.py**](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/crypto/rainbows_solver.py)
 ***
 ## BEGINNER
 ### Pieces
-[Pieces.java]([https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/beginner/Pieces.java](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/beginner/Pieces.java))
+[**Pieces.java**]([https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/beginner/Pieces.java](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/beginner/Pieces.java))
 A java source code is given.
 
 ```java
@@ -63,11 +63,11 @@ It gets the input string one-by-one. If It is divided by two, It adds **|** to *
 Okay, let's decrypted that string. If the added character is **|** ,  multiplies the letter by 2 . Or, if the added character is **\\**, plus 1 and multiplies by 2
 >comparing string is char code, not a number
 
-Source code : [pieces_solve.py](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/beginner/pieces_solve.py)
+Source code : [**pieces_solve.py**](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/beginner/pieces_solve.py)
 ***
 ## MISC
 ### Differences
-[DifferenceTest.java](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/misc/DifferenceTest.java)
+[**DifferenceTest.java**](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/misc/DifferenceTest.java)
 
 I don't know about java very well, but look at the code
 #### code
@@ -126,5 +126,5 @@ Than, make two strings which have strange letters and original letters. like **Ã
 
 I made the two strings and wrote minus each string one-by-one
 
-[Diff_solve.py](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/misc/Diff_solve.py)
+[**Diff_solve.py**](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/misc/Diff_solve.py)
 ***
