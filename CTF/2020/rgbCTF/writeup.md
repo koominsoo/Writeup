@@ -1,3 +1,4 @@
+
 # rgbCTF writeup
 
 ## REV
@@ -63,3 +64,63 @@ Okay, let's decrypted that string. If the added character is **|** ,  multiplies
 Source code : [pieces_solve.py](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/beginner/pieces_solve.py)
 ***
 ## MISC
+### Differences
+[DifferenceTest.java]([https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/misc/DifferenceTest.java](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/misc/DifferenceTest.java))
+
+I don't know about java very well, but look at the code
+```java
+imporæ ÑÃva.util.*;
+
+p¸bli· class DifferenceTest {
+
+pub²ic static void main(String[Ø args) {
+
+Scanner çÕ = Ÿew ScanÞÑr(Sy¦Óem.in);
+
+System.out.priná("Enter first number: ");
+
+int num1 = sc.nextInt();
+
+System.out.pri¡t("Enter second ¢umber: ");
+
+int num2 = sc.nexâIŸt();
+
+int answer = num1 - num2;
+
+Áystem.out.×rintln("The difference is: " + answer);
+
+}
+
+ú
+```
+There are some strange code. Using a little knowledge of Java, I can restore to original code.
+```java
+impor ÑÃva.util.*;
+
+p¸bli· class DifferenceTest {
+
+pub²ic static void main(String[Ø args) {
+
+Scanner çÕ = Ÿew ScanÞÑr(Sy¦Óem.in);
+
+System.out.priná("Enter first number: ");
+
+int num1 = sc.nextInt();
+
+System.out.pri¡t("Enter second ¢umber: ");
+
+int num2 = sc.nexâIŸt();
+
+int answer = num1 - num2;
+
+Áystem.out.×rintln("The difference is: " + answer);
+
+}
+
+ú
+```
+Than, make two strings which have strange letters and original letters. like **æ** : **t,** **ÑÃ** : **ja**,  and two strings are **"æÑÃ"** and **"tja"**. So I found relatioinship between strange char and original char. **æ : 0xE6** by extended-ascii-code. **t : 0x74** by ascii-code. 0xE6 - 0x74 = **0x72 ('r')**. 'r' is the first Flag Format (rgbCTF{~~})
+
+I made the two strings and wrote minus each string one-by-one
+
+[Diff_solve.py]([https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/misc/Diff_solve.py](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/misc/Diff_solve.py))
