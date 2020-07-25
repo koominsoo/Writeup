@@ -65,7 +65,7 @@ Source code : [pieces_solve.py](https://github.com/snwox/Writeup/blob/master/CTF
 ***
 ## MISC
 ### Differences
-[DifferenceTest.java]([https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/misc/DifferenceTest.java](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/misc/DifferenceTest.java))
+[DifferenceTest.java](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/misc/DifferenceTest.java)
 
 I don't know about java very well, but look at the code
 ```java
