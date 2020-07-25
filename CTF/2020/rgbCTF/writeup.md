@@ -1,5 +1,6 @@
 
 
+
 # rgbCTF writeup
 
 ## REV
@@ -69,6 +70,7 @@ Source code : [pieces_solve.py](https://github.com/snwox/Writeup/blob/master/CTF
 [DifferenceTest.java](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/misc/DifferenceTest.java)
 
 I don't know about java very well, but look at the code
+#### code
 ```java
 imporæ ÑÃva.util.*;
 
@@ -95,29 +97,30 @@ int answer = num1 - num2;
 ú
 ```
 There are some strange code. Using a little knowledge of Java, I can restore to original code.
+#### original code
 ```java
-imporæ ÑÃva.util.*;
-p¸bli· class DifferenceTest {
+import java.util.*;
+public class DifferenceTest {
 
-pub²ic static void main(String[Ø args) {
+public static void main(String[] args) {
 
-Scanner çÕ = Ÿew ScanÞÑr(Sy¦Óem.in);
+Scanner sc = Ÿew Scanner(System.in);
 
-System.out.priná("Enter first number: ");
+System.out.print("Enter first number: ");
 
 int num1 = sc.nextInt();
 
-System.out.pri¡t("Enter second ¢umber: ");
+System.out.print("Enter second ¢umber: ");
 
-int num2 = sc.nexâIŸt();
+int num2 = sc.nextInt();
 
 int answer = num1 - num2;
 
-Áystem.out.×rintln("The difference is: " + answer);
+System.out.println("The difference is: " + answer);
 
 }
 
-ú
+}
 ```
 Than, make two strings which have strange letters and original letters. like **æ** : **t,** **ÑÃ** : **ja**,  and two strings are **"æÑÃ"** and **"tja"**. And I found relatioinship between strange char and original char. **æ : 0xE6** by extended-ascii-code. **t : 0x74** by ascii-code. 0xE6 - 0x74 = **0x72 ('r')**. 'r' is the first Flag Format (rgbCTF{~~})
 
