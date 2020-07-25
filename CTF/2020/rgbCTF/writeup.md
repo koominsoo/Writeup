@@ -29,7 +29,7 @@ Here is my Sousce code. [**rainbows_solver.py**](https://github.com/snwox/Writeu
 ***
 ## BEGINNER
 ### Pieces
-[**Pieces.java**]([https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/beginner/Pieces.java](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/beginner/Pieces.java))
+[**Pieces.java**](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/beginner/Pieces.java)
 A java source code is given.
 
 ```java
