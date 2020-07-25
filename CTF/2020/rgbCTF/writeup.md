@@ -1,4 +1,5 @@
 
+
 # rgbCTF writeup
 
 ## REV
@@ -13,11 +14,11 @@
 There are 32 and 64 bites strings. 32byte : encrypted with **MD5**. 64byte : encrypted with **SHA256**
 
 I guess the name 'rainbows' is related with **rainbow table**
->What is rainbow table?
+>What is the rainbow table?
 >>It's a table that stores all the values that can be created using the hash function.
 
 ![md5 crack](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/crypto/rainbow%20crack.PNG)
-For example, crack first 32byte string with MD5. And you can see 'r'
+For example, crack the first 32byte string with MD5. And you can see 'r'
 
 Then, I can solve this problem by making a Rainbow table with all the letters
 >Sometimes two letters are encrypted.
@@ -52,14 +53,14 @@ return ans;
 }
 }
 ```
-It receives input which is encrypted with divide() function and compares with **"9|2/9/:|4/7|8|4/2/1/2/9/"**
+It receives an input which is encrypted with divide() function and compares with **"9|2/9/:|4/7|8|4/2/1/2/9/"**
 
 Let's see divide() function.
 
 It gets the input string one-by-one. If It is divided by two, It adds **|** to **ans**. Or, It adds **\\** to **ans**
 
 Okay, let's decrypted that string. If the added character is **|** ,  multiplies the letter by 2 . Or, if the added character is **\\**, plus 1 and multiplies by 2
->comparing string is char code, not number
+>comparing string is char code, not a number
 
 Source code : [pieces_solve.py](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/beginner/pieces_solve.py)
 ***
@@ -95,8 +96,7 @@ int answer = num1 - num2;
 ```
 There are some strange code. Using a little knowledge of Java, I can restore to original code.
 ```java
-impor ÑÃva.util.*;
-
+imporæ ÑÃva.util.*;
 p¸bli· class DifferenceTest {
 
 pub²ic static void main(String[Ø args) {
@@ -119,7 +119,7 @@ int answer = num1 - num2;
 
 ú
 ```
-Than, make two strings which have strange letters and original letters. like **æ** : **t,** **ÑÃ** : **ja**,  and two strings are **"æÑÃ"** and **"tja"**. So I found relatioinship between strange char and original char. **æ : 0xE6** by extended-ascii-code. **t : 0x74** by ascii-code. 0xE6 - 0x74 = **0x72 ('r')**. 'r' is the first Flag Format (rgbCTF{~~})
+Than, make two strings which have strange letters and original letters. like **æ** : **t,** **ÑÃ** : **ja**,  and two strings are **"æÑÃ"** and **"tja"**. And I found relatioinship between strange char and original char. **æ : 0xE6** by extended-ascii-code. **t : 0x74** by ascii-code. 0xE6 - 0x74 = **0x72 ('r')**. 'r' is the first Flag Format (rgbCTF{~~})
 
 I made the two strings and wrote minus each string one-by-one
 
