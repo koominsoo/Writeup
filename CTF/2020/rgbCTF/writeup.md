@@ -1,6 +1,3 @@
-
-
-
 # rgbCTF writeup
 
 ## REV
