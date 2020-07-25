@@ -86,9 +86,8 @@ Just xor the numbers with 0x265d1d23. [**Too_Slow_solve.py**](https://github.com
 
 ***
 ### Advanced_Reversing_Mechanics_1
-[**Advanced_Reversing_Mechanics_1.o**](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/rev/Advanced_Reversing_Mechanics_1.o) object file is given. Encrypts flag with encryptFlag() function. output is also given.
+[**Advanced_Reversing_Mechanics_1.o**](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/rev/Advanced_Reversing_Mechanics_1.o) object file is given. output is also given.
 >71, 66, 61, 42, 53, 45, 7A, 40, 51, 4C, 5E, 30, 79, 5E, 31, 5E, 64, 59, 5E, 38, 61, 36, 65, 37, 63, 7C,
-```
 ### encryptFlag ( char *param_1 )
 ```c++
 void encryptFlag(char *param_1)
@@ -108,7 +107,7 @@ void encryptFlag(char *param_1)
   return;
 }
 ```
-Encrypt routine is so simple. Decreses the values of characters by 1. Conversely, if you increse those by 1, you can get a Flag.
+This program encrypts flag with encryptFlag() function. but I can't run this ARM binary. Encrypt routine is so simple. Decreses the values of characters by 1. Conversely, if you increse those by 1, you can get a Flag.
 ```
 => 71,66,61,42,53,45,7A,40,51,4C,5E,30,79,5E,31,5E,64,59,5E,38,61,36,65,37,63,7C,
 => 72,67,62,43,54,46,7b,41,52,4d,5f,31,7a,5f,32,5f,65,5a,5f,39,62,37,66,38,64,7d
