@@ -1,6 +1,7 @@
 # rgbCTF writeup
 
-## REV
+
+# REV
 ### Too Slow
 [**Too_Slow**](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/rev/Too_Slow) ELF file is given.
 ### main
@@ -114,7 +115,7 @@ This program encrypts flag with encryptFlag() function. but I can't run this ARM
 => rgbCTF{ARM_1z_2_eZ_9b7f8d}
 ```
 ***
-## CRYPTO
+# CRYPTO
 ### Rainbows
 [**rainbows.txt**](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/crypto/rainbows.txt)
 
@@ -133,7 +134,7 @@ Then, I can solve this problem by making a Rainbow table with all the letters
 
 Here is my S0usce c0de. [**rainbows_solver.py**](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/crypto/rainbows_solver.py)
 ***
-## BEGINNER
+# BEGINNER
 ### Pieces
 [**Pieces.java**]([https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/beginner/Pieces.java](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/beginner/Pieces.java))
 A java source code is given.
@@ -171,7 +172,7 @@ Okay, let's decrypted that string. If the added character is **|** ,  multiplies
 
 Source code : [**pieces_solve.py**](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/beginner/pieces_solve.py)
 ***
-## MISC
+# MISC
 ### Differences
 [**DifferenceTest.java**](https://github.com/snwox/Writeup/blob/master/CTF/2020/rgbCTF/misc/DifferenceTest.java)
 
