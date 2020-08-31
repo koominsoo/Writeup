@@ -1,0 +1,71 @@
+   0x555555555591:	endbr64 
+   0x555555555595:	push   rbp
+   0x555555555596:	mov    rbp,rsp
+   0x555555555599:	sub    rsp,0x20
+   0x55555555559d:	mov    DWORD PTR [rbp-0x14],edi
+   0x5555555555a0:	mov    QWORD PTR [rbp-0x20],rsi
+   0x5555555555a4:	mov    eax,0x0
+   0x5555555555a9:	call   0x555555555249
+   0x5555555555ae:	mov    edi,0x10
+   0x5555555555b3:	call   0x555555555110 <malloc@plt>
+   0x5555555555b8:	mov    QWORD PTR [rbp-0x8],rax
+   0x5555555555bc:	lea    rdi,[rip+0xa95]        # give me flag!
+   0x5555555555c3:	call   0x5555555550d0 <puts@plt>
+   0x5555555555c8:	mov    rax,QWORD PTR [rbp-0x8]
+   0x5555555555cc:	mov    rsi,rax
+   0x5555555555cf:	lea    rdi,[rip+0xab9]        # %s
+   0x5555555555d6:	mov    eax,0x0
+   0x5555555555db:	call   0x555555555140 <__isoc99_scanf@plt>
+   0x5555555555e0:	mov    rax,QWORD PTR [rbp-0x8]
+   0x5555555555e4:	mov    rdi,rax
+   0x5555555555e7:	call   0x555555555335 # len(string) > 0
+   0x5555555555ec:	test   eax,eax
+   0x5555555555ee:	je     0x555555555677
+   0x5555555555f4:	mov    rax,QWORD PTR [rbp-0x8] #rbp-0x8 - my string
+   0x5555555555f8:	mov    rdi,rax
+   0x5555555555fb:	call   0x5555555550e0 <strlen@plt>
+   0x555555555600:	cmp    rax,0x10			# len = 0x10
+   0x555555555604:	jne    0x55555555567a
+   0x555555555606:	mov    rax,QWORD PTR [rbp-0x8]
+   0x55555555560a:	mov    rdi,rax
+   0x55555555560d:	call   0x555555555391 		# first
+   0x555555555612:	mov    DWORD PTR [rbp-0x10],eax
+   0x555555555615:	mov    rax,QWORD PTR [rbp-0x8]
+   0x555555555619:	mov    rdi,rax
+   0x55555555561c:	call   0x555555555421 		# second(first)
+   0x555555555621:	mov    DWORD PTR [rbp-0xc],eax 	#rbp-0xc -> second ret
+   0x555555555624:	mov    edx,DWORD PTR [rbp-0x10]	#rbp-0x10 -> first ret
+   0x555555555627:	mov    eax,DWORD PTR [rbp-0xc]
+   0x55555555562a:	lea    ecx,[rdx+rax*1]
+   0x55555555562d:	movsxd rax,ecx
+   0x555555555630:	imul   rax,rax,0x66666667
+   0x555555555637:	shr    rax,0x20
+   0x55555555563b:	mov    edx,eax
+   0x55555555563d:	sar    edx,0x2
+   0x555555555640:	mov    eax,ecx
+   0x555555555642:	sar    eax,0x1f
+   0x555555555645:	sub    edx,eax
+   0x555555555647:	mov    eax,edx
+   0x555555555649:	shl    eax,0x2
+   0x55555555564c:	add    eax,edx
+   0x55555555564e:	add    eax,eax
+   0x555555555650:	sub    ecx,eax
+   0x555555555652:	mov    edx,ecx
+   0x555555555654:	test   edx,edx
+   0x555555555656:	jne    0x555555555669
+   0x555555555658:	mov    eax,0x0
+   0x55555555565d:	call   0x5555555552ae		#read_flag
+   0x555555555662:	mov    eax,0x0
+   0x555555555667:	jmp    0x55555555568c
+   0x555555555669:	lea    rdi,[rip+0xa22]        # that's not my num
+   0x555555555670:	call   0x5555555550d0 <puts@plt>
+   0x555555555675:	jmp    0x55555555567b
+   0x555555555677:	nop
+   0x555555555678:	jmp    0x55555555567b
+   0x55555555567a:	nop
+   0x55555555567b:	lea    rdi,[rip+0xa29]        # no flag for u
+=> 0x555555555682:	call   0x5555555550d0 <puts@plt>
+   0x555555555687:	mov    eax,0x0
+   0x55555555568c:	leave  
+   0x55555555568d:	ret    
+
