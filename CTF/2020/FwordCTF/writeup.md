@@ -19,7 +19,7 @@ BOF occurs in vuln function (canary was not found). The address of the **system*
 https://libc.blukat.me
 So I used that site and input **CTF server's system addr** in order to find the libc file on **CTF server**. **Four libc files** were found. 
 ```
-payload : A*(0x1c+4)+system addr+DUMMY(4)(ret address)+/bin/sh address on libc
+payload : A*(0x1c+4) | system addr | DUMMY(4) | /bin/sh addr
 ```
 I changed **/bin/sh** address in **four libc files** until I get a shell. [solve.py ](https://github.com/snwox/Writeup/blob/master/CTF/2020/FwordCTF/pwn/solve.py)
 
