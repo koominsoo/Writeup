@@ -29,7 +29,8 @@ Open with **HxD** to find flag at the end of the file.
 
 ```
 Just get the input and end. (**simple ROP**). Get libcbase address and return to **oneshot_gadget**.
-After ubuntu 18.04, at do_system+1094, It can occurs error, because the stack must be arranged in 16 bytes. so just add a ret; gadget.
+
+After ubuntu 18.04, at do_system+1094, It can occurs error, because the stack must be arranged in 16 bytes. So just add a ret; gadget before return to One-shot gadget.
 <br>exploit file : [ex1.py](https://github.com/snwox/Writeup/blob/master/CTF/2020/DIMICTF/pwn/ex1.py)
 ## PWN 200 | [binary](https://github.com/snwox/Writeup/blob/master/CTF/2020/DIMICTF/pwn/pwn_200_f03f3d4ad43a422a)
 ```asm
