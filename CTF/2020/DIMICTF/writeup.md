@@ -29,6 +29,7 @@ Open with **HxD** to find flag at the end of the file.
 
 ```
 Just get the input and end. (**simple ROP**). Get libcbase address and return to **oneshot_gadget**.
+After ubuntu 18.04, at do_system+1094, It can occurs error, because the stack must be arranged in 16 bytes. so just add a ret; gadget.
 <br>exploit file : [ex1.py](https://github.com/snwox/Writeup/blob/master/CTF/2020/DIMICTF/pwn/ex1.py)
 ## PWN 200 | [binary](https://github.com/snwox/Writeup/blob/master/CTF/2020/DIMICTF/pwn/pwn_200_f03f3d4ad43a422a)
 ```asm
@@ -54,5 +55,6 @@ Get the input until '\n' . There is a **shell** function executing shell. My inp
 - rax = rbp-0x10
 
 Input until **[rbp-0x10]** and manipulate **[rbp-0x10]** to point **[rbp+8]**. **[rbp-0x50+rax]** -> **rbp+8**, **rax=0x50+8=0x58**. and Input the address of **shell function**
+
 <br>exploit file : [ex2.py](https://github.com/snwox/Writeup/blob/master/CTF/2020/DIMICTF/pwn/ex2.py)
 ### ThaNks F0r R3ading. I really regret that I couldn't solve reversing problems.
