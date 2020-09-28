@@ -120,7 +120,7 @@ if ( count > 9 ){
 }
 read(0, &s, count);
 ```
-but in read function. Third arg use **count** instead of count2. **count** must be a number between 7 and 9 to input **s** to **"rainbow"**. To make **count** to 7 ~ 9, sleep 7\*4 ~ 9\*4 seconds after making a thread.
+But in read function. Third arg uses **count** instead of count2. **count** must be a number between 7 and 9 to input **s** to **"rainbow"**. To make **count** to 7 ~ 9, sleep 7\*4 ~ 9\*4 seconds after making a thread.
 
 exploit code :  [ex.py](https://github.com/snwox/Writeup/blob/master/CTF/2020/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C/Q2/ex.py)
 ```python
