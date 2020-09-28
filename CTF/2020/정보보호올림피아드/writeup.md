@@ -258,7 +258,7 @@ def  choice(arg):
 		lbl_final_result.config(foreground=color)
 		client.close()
 ```
-The winning decision is made on the client. So I can manipulate the results. If I win, It sends **round\${game_round}** and **state$Yes**. Else, just close the client.
+The winning decision is made on the client. So I can manipulate the results. If I win, It sends **round\${game_round}** and **state$Yes**. Else, it just closes the client.
 ```python
 def  count_down(my_timer, nothing):
 global game_round
