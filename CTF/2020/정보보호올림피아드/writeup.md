@@ -150,11 +150,11 @@ I decoded that output file, It starts with **‰PNG** and ends with **IEND®B`�
 >zip password
 
 
-There are packet file and png file.
-![사진](https://github.com/snwox/Writeup/blob/master/CTF/2020/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C/Q5/I%20have%20a%20flag/we%20found%20something.png)
-Hmm... I should see the identifier in ICMP packets
-![사진](https://github.com/snwox/Writeup/blob/master/CTF/2020/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C/res/Q5_1.JPG)
-Those packets include a flag.
+There are packet file and png file.<br>
+![사진](https://github.com/snwox/Writeup/blob/master/CTF/2020/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C/Q5/I%20have%20a%20flag/we%20found%20something.png)<br>
+Hmm... I should see the identifier in ICMP packets<br>
+![사진](https://github.com/snwox/Writeup/blob/master/CTF/2020/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C/res/Q5_1.JPG)<br>
+Those packets include a flag.<br>
 ![사진](https://github.com/snwox/Writeup/blob/master/CTF/2020/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C/res/Q5-1.png)
 ![사진](https://github.com/snwox/Writeup/blob/master/CTF/2020/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C/res/Q5-2.png)
 ![사진](https://github.com/snwox/Writeup/blob/master/CTF/2020/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C/res/Q5-3.png)
@@ -175,8 +175,7 @@ Analyze with **x64 dbg** and found strings. python?? I have heard that python fi
 
 I converted client.exe to client.pyc with **pyinstxtractor**. But .pyc file could be decompiled to read correct .py code. 
 
->33 0D 0D 0A 00 00 00 00 63 00 00 00 00 00 00 00  to 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03 F3 0D 0A 2B 79 67 58 63 00 00 00 00 00 00 00
+>33 0D 0D 0A 00 00 00 00 63 00 00 00 00 00 00 00 ☞☞☞☞☞ 03 F3 0D 0A 2B 79 67 58 63 00 00 00 00 00 00 00
 
 https://bpsecblog.wordpress.com/2017/01/06/holyshield-ransome/
 I tried to decompile with **Easy Python Decompiler**. But the file header has an error. I fixed the file header by referring to that blog and decompiled it again. Success.
