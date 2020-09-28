@@ -1,4 +1,5 @@
 # 정보보호 올림피아드 2020 Writeup	
+~~~
 ## Q2 | 100 | [bomberman](https://github.com/snwox/Writeup/blob/master/CTF/2020/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C/Q2/bomberman)
 ```c++
     puts("0. wanted");
@@ -123,18 +124,9 @@ read(0, &s, count);
 But in read function. Third arg uses **count** instead of count2. **count** must be a number between 7 and 9 to input **s** to **"rainbow"**. To make **count** to 7 ~ 9, sleep 7\*4 ~ 9\*4 seconds after making a thread.
 
 exploit code :  [ex.py](https://github.com/snwox/Writeup/blob/master/CTF/2020/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C/Q2/ex.py)
-```python
-from pwn import *
-r=remote("1.209.148.228",7677)
-r.sendline("1")
-sleep(25)
-r.sendline("4")
-r.sendline("10")
-r.sendline("rainbow")
-r.sendline("6")
-r.interactive()
-```
+<br>
 But In Server, sleep function does not sleep exactly 4 seconds. So you must sleep about 28-3 ~ 36-3
+~~~
 ## Q5 | 100 | zip, HxD hurts em, I was a picture
 output file and a zip file with a password were given.
 ```
@@ -151,16 +143,17 @@ I decoded that output file, It starts with **‰PNG** and ends with **IEND®B`�
 
 
 There are packet file and png file.<br>
-![사진](https://github.com/snwox/Writeup/blob/master/CTF/2020/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C/Q5/I%20have%20a%20flag/we%20found%20something.png)<br>
-Hmm... I should see the identifier in ICMP packets<br>
-![사진](https://github.com/snwox/Writeup/blob/master/CTF/2020/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C/res/Q5_1.JPG)<br>
-Those packets include a flag.<br>
+![사진](https://github.com/snwox/Writeup/blob/master/CTF/2020/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C/Q5/I%20have%20a%20flag/we%20found%20something.png)<br><br>
+Hmm... I should see the identifier in ICMP packets<br><br>
+![사진](https://github.com/snwox/Writeup/blob/master/CTF/2020/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C/res/Q5_1.JPG)<br><br>
+Those packets include a flag.<br><br>
 ![사진](https://github.com/snwox/Writeup/blob/master/CTF/2020/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C/res/Q5-1.png)
 ![사진](https://github.com/snwox/Writeup/blob/master/CTF/2020/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C/res/Q5-2.png)
 ![사진](https://github.com/snwox/Writeup/blob/master/CTF/2020/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C/res/Q5-3.png)
 <br><br><br>~~~<br><br><br>
 ![사진](https://github.com/snwox/Writeup/blob/master/CTF/2020/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C/res/Q5-END.png)
 >flag:{N0_P@!n_N0_g@!N}
+~~~
 ## Q6 | 100 | packet file
 ![사진](https://github.com/snwox/Writeup/blob/master/CTF/2020/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C/res/q6-1.JPG)
 
@@ -275,6 +268,7 @@ if game_round <= TOTAL_NO_OF_ROUNDS:
 the game_round is increased by 1. <br>So I can win 1000 times by sending data **"round$0" + "state\$Yes"** ~ **"round$1000"+"state\$Yes"**
 
 exploit code : [ex.py](https://github.com/snwox/Writeup/blob/master/CTF/2020/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C/Q6/ex.py)
+~~~
 ## Q10 | 100
 >This issue can be exploited by LDAP search expressions that have caused the LDAP server process to stop responding.
 
