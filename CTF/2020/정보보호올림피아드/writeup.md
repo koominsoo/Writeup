@@ -167,7 +167,7 @@ Save as a zip file. Then analyze client.exe file. The exefile plays rock-paper-s
 Analyzed with **x64 dbg** and found strings. python?? I have heard that python file can be made into exe file. 
 >python .\pyinstxtractor.py .\client.exe
 
-I converted client.exe to client.pyc with **pyinstxtractor**. But .pyc file could be decompiled to read correct .py code. 
+I converted client.exe to client.pyc with **pyinstxtractor**. But .pyc file should be decompiled to read correct .py code. 
 
 >33 0D 0D 0A 00 00 00 00 63 00 00 00 00 00 00 00 ☞☞☞☞☞ 03 F3 0D 0A 2B 79 67 58 63 00 00 00 00 00 00 00
 
