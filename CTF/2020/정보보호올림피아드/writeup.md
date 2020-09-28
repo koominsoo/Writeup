@@ -121,11 +121,11 @@ if ( count > 9 ){
 }
 read(0, &s, count);
 ```
-But in read function. Third arg uses **count** instead of count2. **count** must be a number between 7 and 9 to input **s** to **"rainbow"**. To make **count** to 7 ~ 9, sleep 7\*4 ~ 9\*4 seconds after making a thread.
+But in read function. Third arg uses **count** instead of count2. **count** must be a number between 7 and 9 to input **s** to **"rainbow"**. To make **count** to 7 ~ 9, sleep 7\*4 ~ 9\*4 seconds after making a thread.<br>Make Thread, Sleep about 25 seconds, Input **"rainbow"**, Input 6 to read FLAG
 
 exploit code :  [ex.py](https://github.com/snwox/Writeup/blob/master/CTF/2020/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C/Q2/ex.py)
 <br>
-But In Server, sleep function does not sleep exactly 4 seconds. So you must sleep about 28-3 ~ 36-3
+But In Server, sleep function does not sleep exactly 4 seconds, a little shorter than four seconds. so I used sleep(25)
 
 ---
 ## Q5 | 100 | zip, HxD hurts em, I was a picture
@@ -164,7 +164,7 @@ In the packet file, It sends zip file to the FTP protocol. Right-click -> Follow
 Save as a zip file. Then analyze client.exe file. The exefile plays rock-paper-scissors with the server. I should win 1000 times.... but I can't <br><br>
 ![사진](https://github.com/snwox/Writeup/blob/master/CTF/2020/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C/res/q6-3.JPG)
 <br>
-Analyze with **x64 dbg** and found strings. python?? I have heard that python file can be made into exe file. 
+Analyzed with **x64 dbg** and found strings. python?? I have heard that python file can be made into exe file. 
 >python .\pyinstxtractor.py .\client.exe
 
 I converted client.exe to client.pyc with **pyinstxtractor**. But .pyc file could be decompiled to read correct .py code. 
