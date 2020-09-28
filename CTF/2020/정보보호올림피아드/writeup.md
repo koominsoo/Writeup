@@ -125,7 +125,7 @@ But in read function. Third arg uses **count** instead of count2. **count** must
 
 exploit code :  [ex.py](https://github.com/snwox/Writeup/blob/master/CTF/2020/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C/Q2/ex.py)
 <br>
-But In Server, sleep function does not sleep exactly 4 seconds, a little shorter than four seconds. so I used sleep(25)
+But In Server, sleep function sleep a little shorter than 4 seconds. so I used sleep(25)
 
 ---
 ## Q5 | 100 | zip, HxD hurts em, I was a picture
