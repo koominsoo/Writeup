@@ -149,10 +149,8 @@ I decoded that output file, It starts with **‰PNG** and ends with **IEND®B`�
 >zip password
 There are packet file and png file.
 ![사진](https://github.com/snwox/Writeup/blob/master/CTF/2020/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C/Q5/I%20have%20a%20flag/we%20found%20something.png)
-
 Hmm... I should see the identifier in ICMP packets
 ![사진](https://github.com/snwox/Writeup/blob/master/CTF/2020/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C/res/Q5_1.JPG)
-
 Those packets include a flag.
 ![사진](https://github.com/snwox/Writeup/blob/master/CTF/2020/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C/res/Q5-1.png)
 ![사진](https://github.com/snwox/Writeup/blob/master/CTF/2020/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C/res/Q5-2.png)
