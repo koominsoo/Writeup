@@ -1,5 +1,5 @@
 # 정보보호 올림피아드 2020 Writeup	
-~~~
+---
 ## Q2 | 100 | [bomberman](https://github.com/snwox/Writeup/blob/master/CTF/2020/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C/Q2/bomberman)
 ```c++
     puts("0. wanted");
@@ -153,7 +153,7 @@ Those packets include a flag.<br><br>
 <br><br><br>~~~<br><br><br>
 ![사진](https://github.com/snwox/Writeup/blob/master/CTF/2020/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C/res/Q5-END.png)
 >flag:{N0_P@!n_N0_g@!N}
-~~~
+---
 ## Q6 | 100 | packet file
 ![사진](https://github.com/snwox/Writeup/blob/master/CTF/2020/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C/res/q6-1.JPG)
 
@@ -268,7 +268,7 @@ if game_round <= TOTAL_NO_OF_ROUNDS:
 the game_round is increased by 1. <br>So I can win 1000 times by sending data **"round$0" + "state\$Yes"** ~ **"round$1000"+"state\$Yes"**
 
 exploit code : [ex.py](https://github.com/snwox/Writeup/blob/master/CTF/2020/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C/Q6/ex.py)
-~~~
+---
 ## Q10 | 100
 >This issue can be exploited by LDAP search expressions that have caused the LDAP server process to stop responding.
 
