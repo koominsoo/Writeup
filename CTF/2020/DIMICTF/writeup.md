@@ -128,7 +128,7 @@ Now I can analyze the code more easily.
 - v10 = v16 = original file 
 - v20 = random 4bytes in /dev/urandom
 
-It writes random 4bytes in v17. And write each one byte XORed with random 4 bytes. (random[ i%4 ]).
+It writes random 4bytes in v17. And write each byte XORed with random 4 bytes. (random[ i%4 ]).
 
 I know random 4 bytes used to encrypt. So get first 4 bytes and XOR again with other data to decrypt "~_enc" file.
 ```python
