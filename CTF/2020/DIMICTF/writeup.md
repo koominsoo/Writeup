@@ -61,7 +61,7 @@ Input until **[rbp-0x10]** and manipulate **[rbp-0x10]** to point **[rbp+8]**. *
 <br>exploit file : [ex2.py](https://github.com/snwox/Writeup/blob/master/CTF/2020/DIMICTF/pwn/ex2.py)
 
 ## REV 100 | [binary](https://github.com/snwox/Writeup/blob/master/CTF/2020/DIMICTF/rev/rev_100_704dc40c5c240202)
-I used 'string' command to find flag, but "UPX" is found. So I unpacked it with UPX.
+I used 'string' command to find flag, but "UPX" was found. So I unpacked it with UPX.
 ```asm
    0x0000000000401d8d <+88>:    mov    eax,DWORD PTR [rbp-0x58]
    0x0000000000401d90 <+91>:    cdqe
