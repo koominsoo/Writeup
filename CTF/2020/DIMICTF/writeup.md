@@ -124,12 +124,13 @@ I opened the binary and restored functions.
 Now I can analyze the code more easily.
 
 - v6 = v7 = /dev/urandom file.
-- v11 = v17 = encoded file
+- v11 = v17 = "~_enc" file
 - v10 = v16 = original file 
 - v20 = random 4bytes in /dev/urandom
-First, write random 4bytes in encoded file. And write each one byte XORed with random 4 byte. (random[ i%4 ]).
 
-I can know random 4 byte used to encrypt. So gets first 4 bytes and XOR again with other data to decrypt "~_enc" file.
+It writes random 4bytes in v17. And write each one byte XORed with random 4 bytes. (random[ i%4 ]).
+
+I know random 4 bytes used to encrypt. So get first 4 bytes and XOR again with other data to decrypt "~_enc" file.
 ```python
 data="""72 E2 66 45 36 AB 2B 0C 09 83 04 27 4B 86 56 77 10 81 05 70 4A D5 50 23 16 DA 04 74 46 83 07 20 44 DA 53 7D 41 D1 07 7C 17 D4 51 7C 43 83 07 7C 11 D4 56 23 16 D7 57 75 4A DA 03 74 47 87 53 24 46 D1 05 73 13 DA 5E 74 42 9F 6C""".split()
 for i in  range(len(data)):
