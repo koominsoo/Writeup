@@ -62,7 +62,7 @@ Input until **[rbp-0x10]** and manipulate **[rbp-0x10]** to point **[rbp+8]**. *
 
 ## REV 100 | [binary](https://github.com/snwox/Writeup/blob/master/CTF/2020/DIMICTF/rev/rev_100_704dc40c5c240202)
 I used 'string' command to find flag, but "UPX" is found. So I unpacked it with UPX.
-```html
+```asm
    0x0000000000401d8d <+88>:    mov    eax,DWORD PTR [rbp-0x58]
    0x0000000000401d90 <+91>:    cdqe
    0x0000000000401d92 <+93>:    movzx  eax,BYTE PTR [rbp+rax*1-0x50]
@@ -88,7 +88,7 @@ I used 'string' command to find flag, but "UPX" is found. So I unpacked it with 
    0x0000000000401ddf <+170>:   jl     0x401d8d <main+88>
 ```
 It read input and repeat this until it's len
-```html
+```asm
    0x0000000000401db3 <+126>:   cmp    ecx,eax
    0x0000000000401db5 <+128>:   setne  al
    0x0000000000401db8 <+131>:   movzx  eax,al
@@ -98,7 +98,7 @@ It read input and repeat this until it's len
 - eax = key (0x55)
 - edx = input[i]
 If **data[i]** is different from **key**, It sets **al** = 1 and compares It with edx(input[i]). If not same, just call exit()
-```html
+```asm
 0x4c0100 <data>:        0x34662c2e1c181c11      0x26640a27652d2b3d
 0x4c0110 <data+16>:     0x2c2666307865260a      0x000000000000282c
 ```
