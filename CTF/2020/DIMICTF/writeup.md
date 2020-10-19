@@ -97,7 +97,7 @@ It read input and repeat this until it's len
 - ecx = data[i]
 - eax = key (0x55)
 - edx = input[i]
-If **data[i]** is different from **key**, It sets **al** = 1 and compares It with edx(input[i]). If not same, just call exit()
+If **data[i]** is different from **key**, It sets **al** = 1 and compares with edx(input[i]). If not same, just call exit()
 ```asm
 0x4c0100 <data>:        0x34662c2e1c181c11      0x26640a27652d2b3d
 0x4c0110 <data+16>:     0x2c2666307865260a      0x000000000000282c
