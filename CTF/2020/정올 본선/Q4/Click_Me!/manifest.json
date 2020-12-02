@@ -1,0 +1,23 @@
+{
+  "browser_action": {
+    "default_icon": "icon.png", // 아이콘 제작자 <a href="https://www.flaticon.com/kr/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/kr/" title="Flaticon"> www.flaticon.com</a>
+    "default_popup": "html/olym1.html"
+  },
+  "description": "Click ME!", // 설명
+  "icons": {
+    "128": "icon.png"
+  },
+  "manifest_version": 2, // manifest버전 
+  "name": "Click Me!", // 이름
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "alarms",
+    "background",
+    "browsingData",
+    "storage",
+    "unlimitedStorage",
+    "notifications"
+  ],
+  "version": "1.1" // html 버전
+}

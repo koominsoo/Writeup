@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8"/>
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script>
+        $(window).load(function () {
+            $('#layer_ad').css({
+                'position':'fixed',
+                'bottom':0,
+                'right':'0px',
+                'padding':'10px',
+                'font-size':'12px',
+                'width':'250px',
+                'height':'180px',
+                'border-width':'1px 1px 0 1px',
+                'border-color':'#aaaaaa',
+                'border-style':'solid'
+            });
+            setInterval(function() {
+                if ($('#layer_ad').css('bottom') != '-200px') {
+                    $('#layer_ad').animate({'bottom':'-200px'}, 'slow');
+                } else {
+                    $('#layer_ad').animate({'bottom':'0px'}, 'slow');
+                }
+            }, 5000);
+        });
+    </script>
+	
+	<script>
+        $(window).load(function () {
+            $('#layer_ad1').css({
+                'position':'fixed',
+                'bottom':0,
+                'left':'0px',
+                'padding':'10px',
+                'font-size':'12px',
+                'width':'250px',
+                'height':'180px',
+                'border-width':'1px 1px 0 1px',
+                'border-color':'#aaaaaa',
+                'border-style':'solid'
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="layer_ad">에에베뷉ㅂ베ㅂ베~</div>
+	<div id="layer_ad1">고정~</div>
+</body>
+</html>

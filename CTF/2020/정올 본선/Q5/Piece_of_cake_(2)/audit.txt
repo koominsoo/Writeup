@@ -1,0 +1,27 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Fri Oct 30 12:08:51 2020
+Invocation: foremost -T QR code is know my name 
+Output directory: /mnt/c/Users/seonu/OneDrive/문서/Q5/Piece_of_cake_(2)
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: QR code is know my name
+Start: Fri Oct 30 12:08:51 2020
+Length: 1024 KB (1048576 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.bmp 	      27 KB 	        114 	  (72 x 96)
+1:	00000054.bmp 	      33 KB 	      28002 	  (88 x 96)
+2:	00000121.bmp 	      26 KB 	      62034 	  (71 x 96)
+3:	00000174.bmp 	      24 KB 	      89538 	  (66 x 96)
+4:	00000224.bmp 	      25 KB 	     115122 	  (68 x 96)
+Finish: Fri Oct 30 12:08:51 2020
+
+5 FILES EXTRACTED
+	
+bmp:= 5
+------------------------------------------------------------------
+
+Foremost finished at Fri Oct 30 12:08:51 2020

@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sun Oct 25 02:17:19 2020
+Invocation: foremost /mnt/c/Users/seonu/Downloads/Spectrogram.wav 
+Output directory: /mnt/c/Users/seonu/Onedrive/문서/GitHub/Writeup/CTF/2020/peaCTF2020/misc/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: /mnt/c/Users/seonu/Downloads/Spectrogram.wav
+Start: Sun Oct 25 02:17:19 2020
+Length: 516 KB (529244 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.wav 	     516 KB 	          0 	 
+Finish: Sun Oct 25 02:17:19 2020
+
+1 FILES EXTRACTED
+	
+rif:= 1
+------------------------------------------------------------------
+
+Foremost finished at Sun Oct 25 02:17:19 2020
